@@ -111,7 +111,6 @@ const Login = props => {
                </div>
             </div>
          </section>
-         <button onClick={handleLogin}>เข้าสู่ระบบ</button>
       </div>
    )
 }

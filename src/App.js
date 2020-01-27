@@ -1,26 +1,18 @@
-import React from 'react'
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { HashRouter, Switch } from 'react-router-dom'
 import { PrivateRoute, PublicRoute } from './components/Routes'
-import Loadable from 'react-loadable'
-import LoadingPage from './components/Loading/loading-page'
 
-const Login = Loadable({
-   loader: () => import(/* webpackChunkName: "login" */ './pages/Login'),
-   loading: LoadingPage,
-})
-const Layout = Loadable({
-   loader: () => import(/* webpackChunkName: "layout" */ './components/Layout'),
-   loading: LoadingPage,
-})
-
-const ErrorPage = () => <div>ERROR</div>
+const Login = React.lazy(() => import('./pages/Login/Index.js'))
+const Layout = React.lazy(() => import('./components/Layout/Index.js'))
 
 const App = () => (
    <HashRouter>
-      <Switch>
-         <PublicRoute path="/login" component={Login} />
-         <PrivateRoute component={Layout} />
-      </Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+         <Switch>
+            <PublicRoute path="/login" component={Login} />
+            <PrivateRoute component={Layout} />
+         </Switch>
+      </Suspense>
    </HashRouter>
 )
 export default App
