@@ -1,0 +1,12 @@
+@each $name,
+$color in $theme-colors {
+   .btn-inverse-#{$name} {
+      @include button-variant(rgba($color, 0.1),
+         transparent,
+         $hover-background: rgba($color, 1),
+         $hover-border: transparent,
+         $active-background: $color,
+         $active-border: transparent);
+      color: rgba($color, 1);
+   }
+}

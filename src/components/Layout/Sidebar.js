@@ -1,7 +1,8 @@
 import React from 'react'
 import { Layout, Menu, Icon } from 'antd'
-import { Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import auth from '../../utils/auth'
+import menuList from './menu.json'
 
 const { Sider } = Layout
 const Sidebar = props => {
@@ -12,19 +13,23 @@ const Sidebar = props => {
    }
    return (
       <Sider className="p-2" width={250}>
-         <Menu theme="dark" mode="inline" defaultSelectedKeys="dashboard">
-            <Menu.Item className="rounded-lg h-auto" key="dashboard">
-               <Link to="/">
-                  <Icon className="align-middle" type="dashboard" />
-                  <span className="align-middle">แดชบอร์ด</span>
-               </Link>
-            </Menu.Item>
-            <Menu.Item className="rounded-lg h-auto" key="customer">
-               <Link to="/customer">
-                  <Icon className="align-middle" type="user" />
-                  <span className="align-middle">ข้อมูลลูกค้า</span>
-               </Link>
-            </Menu.Item>
+         {console.log(props.location)}
+         <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={['/']}
+            selectedKeys={[props.location.pathname]}
+         >
+            {menuList.map((item, key) => {
+               return (
+                  <Menu.Item className="rounded-lg h-auto" key={item.pathname}>
+                     <Link to={{ pathname: item.pathname }}>
+                        <Icon className="align-middle" type={item.icon} />
+                        <span className="align-middle">{item.name}</span>
+                     </Link>
+                  </Menu.Item>
+               )
+            })}
             <Menu.Item
                className="rounded-lg h-auto"
                key="logout"
@@ -37,4 +42,4 @@ const Sidebar = props => {
       </Sider>
    )
 }
-export default Sidebar
+export default withRouter(Sidebar)

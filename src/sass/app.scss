@@ -2,3 +2,8 @@
 @import '~antd/dist/antd.min.css';
 @import './variables';
 @import '~bootstrap/scss/bootstrap';
+@import "./Button/button";
+
+.anticon {
+   vertical-align: middle !important;
+}

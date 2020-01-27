@@ -1,0 +1,22 @@
+[{
+      "pathname": "/",
+      "name": "แดชบอร์ด",
+      "icon": "dashboard"
+   },
+   {
+      "pathname": "/customer",
+      "name": "ข้อมูลลูกค้า",
+      "icon": "user",
+      "childrens": [{
+         "pathname": "/customer/create",
+         "name": "เพิ่มข้อมูลลูกค้า",
+         "icon": "user-add"
+      }]
+   },
+
+   {
+      "pathname": "/adsense",
+      "name": "ข้อมูลโฆษณา",
+      "icon": "stock"
+   }
+]
