@@ -1,0 +1,83 @@
+//colors
+$white: #fff;
+$gray-100: rgba(#111, 0.1);
+$gray-200: rgba(#111, 0.2);
+$gray-300: rgba(#111, 0.3);
+$gray-400: rgba(#111, 0.4);
+$gray-500: rgba(#111, 0.5);
+$gray-600: rgba(#111, 0.6);
+$gray-700: rgba(#111, 0.7);
+$gray-800: rgba(#111, 0.8);
+$gray-900: rgba(#111, 0.9);
+$black: #111;
+$blue: #5867dd;
+$indigo: #6610f2;
+$purple: #9816f4;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #ff6600;
+$yellow: #ffb822;
+$green: #1dc9b7;
+$teal: #20c997;
+$cyan: #335de7;
+$gray: #6c757d;
+$gray-dark: #343a40;
+
+
+$primary: #5867dd;
+$secondary: #e1e1ef;
+$success: #0abb87;
+$info: #5578eb;
+$warning: #ffb822;
+$danger: #fd397a;
+$light: #f8f9fa;
+$dark: #343a40;
+$line: #43c606;
+$fb: #1077f2;
+$twitter: #41abe1;
+
+$theme-colors: ('black' : $black,
+   'blue' : $blue,
+   'indigo' : $indigo,
+   'purple' : $purple,
+   'pink' : $pink,
+   'red' : $red,
+   'orange' : $orange,
+   'yellow' : $yellow,
+   'green' : $green,
+   'teal' : $teal,
+   'cyan' : $cyan,
+   'gray' : $gray,
+   'gray-dark' : $gray-dark,
+   'dark': $dark,
+   'line': $line,
+   'fb': $fb,
+   'twitter': $twitter,
+);
+
+//options
+$enable-shadows: true;
+$line-height-base: 1.5;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: $line-height-base;
+
+//shadow
+$box-shadow-sm: 0 0 13px 0 rgba(82, 63, 105, .05);
+$box-shadow: 0 0.5rem 1rem rgba(82, 63, 105, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(82, 63, 105, 0.175);
+$box-shadow-inset: inset 0 0px 0px rgba(82, 63, 105, 0.075);
+
+$font-family-sans-serif: "Sarabun",
+"Noto Sans",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
